@@ -10,6 +10,8 @@ import {
   Grid,
   Box,
 } from '@mui/material'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-expect-error
 import { MuiColorInputValue, MuiColorInput } from 'mui-color-input'
 import { ChangeEvent, FC } from 'react'
 
@@ -44,6 +46,8 @@ const SettingsOverlay: FC<Props> = ({
   settings,
 }) => {
   return (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     <Box height={'100%'}>
       <Box
         sx={{
