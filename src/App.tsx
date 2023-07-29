@@ -20,6 +20,8 @@ const cameraProps = {
   fov: 50,
 }
 
+const resetConfig = structuredClone(initialConfig)
+
 function App() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const [config, setConfig] = useState(initialConfig)
@@ -66,7 +68,9 @@ function App() {
     handleJSONUpload(e, setConfig)
   }
 
-  const handleResetSettings = () => setConfig(structuredClone(initialConfig))
+  const handleResetSettings = () => {
+    setConfig(resetConfig)
+  }
 
   return (
     <Grid height={'100%'} container>

@@ -47,6 +47,7 @@ export const handleJSONUpload = (
       callback(data)
     }
   }
+  e.target.value = ''
 }
 
 export const encodeImageFileAsURL = async (
